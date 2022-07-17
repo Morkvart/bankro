@@ -1,0 +1,19 @@
+@import "reset";
+@import "vars";
+@import "global";
+
+//страница регистрации\авторизации\входа
+@import "login-block";
+
+//страница продуктов
+@import "products-block";
+
+//страница калькулятора
+@import "calculator-block";
+
+//страница проведенных заказов
+@import "history-block";
+
+//страница покупки
+@import "order-block";
+@import "order-pack-block";

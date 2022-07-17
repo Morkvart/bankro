@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankro.tech</title>
+
+    <!-- <link rel="stylesheet" href="../css/history.css"> -->
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css_build/style.css">
+    <link rel="stylesheet" href="../css_build/style_vw.css">
+</head>
+
+<body>
+    <header class="account__header">
+        <div class="account__container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <img src="../img/logo.svg" alt="">
+                </div>
+
+                <div class="header__info-panel">
+
+                    <div class="infop-panel__statistics">
+                        <div class="row1">
+                            <div class="statistics__tasks">
+                                <span class="statistics__title tasks__title">Дел в подписке:</span>
+                                <span class="statistics__count tasks__count">8</span>
+                            </div>
+                            <div class="statistics__meeting">
+                                <span class="statistics__title meeting__title">Собраний:</span>
+                                <span class="statistics__count meeting__count">7</span>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="statistics__day-end">
+                                <span class="statistics__title day-end__title">Дней до окончания:</span>
+                                <span class="statistics__count day-end__count">238</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-panel__account-info">
+                        <a href="#" class="account-info__link">Вернуться в приложение</a>
+
+                        <div class="account-info__notice-container">
+                            <a href="#" class="account-info__notice">
+                                <img src="../img/icons/notice.svg" alt="">
+                                <div class="notice-count">333</div>
+                            </a>
+                            <div class="notice__container">
+                                <p class="notice__title">Уведомления</p>
+                                <div class="notice__list">
+                                    <div class="list__item">
+                                        <p class="item__content">Подтверждение успешной покупки продукта </p>
+                                        <p class="item__data">Сегодня 16:34</p>
+                                    </div>
+
+                                    <div class="list__item">
+                                        <p class="item__content">Ошибка при покупке продукта. Недостаточно денег на
+                                            балансе
+                                        </p>
+                                        <p class="item__data">04.03.2022</p>
+                                    </div>
+
+                                    <div class="list__item">
+                                        <p class="item__content">Ошибка при покупке продукта. Недостаточно денег на
+                                            балансе
+                                        </p>
+                                        <p class="item__data">04.03.2022</p>
+                                    </div>
+
+                                </div>
+                                <a href="notices-history.html" class="notice__link-show">Смотреть все</a>
+                            </div>
+                        </div>
+
+                        <div class="account-info__user">
+                            <div class="user__avatar">
+                                <img src="../img/user-avatar.svg" alt="">
+                            </div>
+                            <span class="user__name">Петров С.</span>
+                        </div>
+                        <a href="#" class="account-info__logout-btn">Выйти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="account-main">
+        <div class="account__container">
+
+            <section class="account-sidebar">
+                <nav class="account-sidebar__menu">
+
+                    <a href="#">Главная</a></li>
+                    <a href="calculator.html">Калькулятор</a></li>
+                    <a href="meetings.html">Проведенные собрания</a></li>
+                    <a href="products.html">Мои продукты</a></li>
+                    <a href="history.html" class="active">История заказов</a></li>
+
+                </nav>
+            </section>
+
+            <section class="account-main__section-content">
+                <h1 class="section-content__title">История заказов</h1>
+
+                <input type="search" placeholder="Поиск среди заказов" class="history-search-field">
+
+                <div class="history-table-container">
+                    <table>
+                        <tr>
+                            <th>
+                                <div>Номер заказа</div>
+                            </th>
+                            <th>
+                                Название продукта
+                            </th>
+                            <th>
+                                <div>Дата покупки</div>
+                            </th>
+                            <th>
+                                <div>Стоимость покупки</div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>234</td>
+                            <td>1 собрание</td>
+                            <td>17.07.2022</td>
+                            <td>10 000 000 ₽</td>
+                        </tr>
+                        <tr>
+                            <td>234</td>
+                            <td>5 собраний</td>
+                            <td>17.07.2022</td>
+                            <td>10 000 000 ₽</td>
+                        </tr>
+                        <tr>
+                            <td>234</td>
+                            <td>2 собрания</td>
+                            <td>17.07.2022</td>
+                            <td>10 000 000 ₽</td>
+                        </tr>
+                        <tr>
+                            <td>234</td>
+                            <td>Пакет “Расширенный”</td>
+                            <td>17.07.2022</td>
+                            <td>10 000 000 ₽</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+            </section>
+
+            <div class="account-main__hepl">
+                <div class="help__img">
+                    <img src="../img/icons/help.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

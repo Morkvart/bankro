@@ -1,0 +1,46 @@
+//================================ fonts
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/IBMPlexSans.eot");
+  src: local("IBM Plex Sans"), local("IBMPlexSans"),
+    url("../fonts/IBMPlexSans.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/IBMPlexSans.woff") format("woff"),
+    url("../fonts/IBMPlexSans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/IBMPlexSans-Medium.eot");
+  src: local("IBM Plex Sans Medium"), local("IBMPlexSans-Medium"),
+    url("../fonts/IBMPlexSans-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/IBMPlexSans-Medium.woff") format("woff"),
+    url("../fonts/IBMPlexSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("IBMPlexSans-SemiBold.eot");
+  src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"),
+    url("../fonts/IBMPlexSans-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/IBMPlexSans-SemiBold.woff") format("woff"),
+    url("../fonts/IBMPlexSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+//================================ colors
+$white: #fff;
+
+$akva: #27f3b5;
+$lightakva: #69ffd1;
+$brightgreen: #00dc99;
+
+$primaryblue: #0f2945;
+$paleblue: #a1c1d7;
+$lightgrey: #f4f7fa;
+$dark: #0c1e34;
+$primaryetxt: #1e2733;

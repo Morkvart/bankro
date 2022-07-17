@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankro.tech</title>
+
+    <!-- <link rel="stylesheet" href="../css/calculator.css"> -->
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css_build/style.css">
+    <link rel="stylesheet" href="../css_build/style_vw.css">
+</head>
+
+<body>
+    <header class="account__header">
+        <div class="account__container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <img src="../img/logo.svg" alt="">
+                </div>
+
+                <div class="header__info-panel">
+
+                    <div class="infop-panel__statistics">
+                        <div class="row1">
+                            <div class="statistics__tasks">
+                                <span class="statistics__title tasks__title">Дел в подписке:</span>
+                                <span class="statistics__count tasks__count">8</span>
+                            </div>
+                            <div class="statistics__meeting">
+                                <span class="statistics__title meeting__title">Собраний:</span>
+                                <span class="statistics__count meeting__count">7</span>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <div class="statistics__day-end">
+                                <span class="statistics__title day-end__title">Дней до окончания:</span>
+                                <span class="statistics__count day-end__count">238</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-panel__account-info">
+                        <a href="#" class="account-info__link">Вернуться в приложение</a>
+
+                        <div class="account-info__notice-container">
+                            <a href="#" class="account-info__notice">
+                                <img src="../img/icons/notice.svg" alt="">
+                                <div class="notice-count">333</div>
+                            </a>
+                            <div class="notice__container">
+                                <p class="notice__title">Уведомления</p>
+                                <div class="notice__list">
+                                    <div class="list__item">
+                                        <p class="item__content">Подтверждение успешной покупки продукта </p>
+                                        <p class="item__data">Сегодня 16:34</p>
+                                    </div>
+
+                                    <div class="list__item">
+                                        <p class="item__content">Ошибка при покупке продукта. Недостаточно денег на
+                                            балансе
+                                        </p>
+                                        <p class="item__data">04.03.2022</p>
+                                    </div>
+
+                                    <div class="list__item">
+                                        <p class="item__content">Ошибка при покупке продукта. Недостаточно денег на
+                                            балансе
+                                        </p>
+                                        <p class="item__data">04.03.2022</p>
+                                    </div>
+
+                                </div>
+                                <a href="notices-history.html" class="notice__link-show">Смотреть все</a>
+                            </div>
+                        </div>
+
+                        <div class="account-info__user">
+                            <div class="user__avatar">
+                                <img src="../img/user-avatar.svg" alt="">
+                            </div>
+                            <span class="user__name">Петров С.</span>
+                        </div>
+                        <a href="#" class="account-info__logout-btn">Выйти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="account-main">
+        <div class="account__container">
+
+            <section class="account-sidebar">
+                <nav class="account-sidebar__menu">
+
+                    <a href="#">Главная</a></li>
+                    <a href="calculator.html" class="active">Калькулятор</a></li>
+                    <a href="meetings.html">Проведенные собрания</a></li>
+                    <a href="products.html">Мои продукты</a></li>
+                    <a href="history.html">История заказов</a></li>
+
+                </nav>
+            </section>
+
+            <section class="account-main__section-content">
+                <h1 class="section-content__title">Калькулятор</h1>
+                <div class="section-content__subtitle">Вы можете воспользоваться калькулятором или выбрать готовый пакет
+                </div>
+
+                <div class="section-content__product-calc">
+
+                    <div class="product-calc__settings-block">
+                        <div class="settings-block__title">Выберите продукты для расчета стоимости</div>
+                        <div class="settings-block__content">
+                            <ul class="content__list">
+                                <li class="content__item">
+                                    <div class="item__header">
+                                        <label class="switch">
+                                            <input type="checkbox" id="c0" onclick="showBlock('c0',0,'r0')">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <p class="item__header-title">Электронные собрания кредиторов</p>
+                                        <img src="../img/icons/arrow.svg" alt="" class="item__header-arrow">
+                                    </div>
+                                    <div class="item__body">
+                                        <div class="body__title">Вы платите за количество собраний </div>
+                                        <div class="body__select-block">
+                                            <p class="select-block__subtitle">Количество собраний</p>
+                                            <p class="select-block__count">5</p>
+                                            <div class="body__slidecontainer">
+                                                <input type="range" min="1" max="10" value="5" class="slider" id="r0"
+                                                    oninput="slider('r0',0)">
+                                            </div>
+                                        </div>
+                                        <div class="body__select-block-range">
+                                            <span>1</span>
+                                            <span>10</span>
+                                        </div>
+                                        <div class="body__price">Стоимость 1 собрания —
+                                            <span class="body__price-value">4 320 ₽</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="content__item">
+                                    <div class="item__header">
+                                        <label class="switch">
+                                            <input type="checkbox" id="c1" onclick="showBlock('c1',1, 'r1')">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <p class="item__header-title">АВТОМАТИЗАЦИЯ</p>
+                                        <img src="../img/icons/arrow.svg" alt="" class="item__header-arrow">
+                                    </div>
+                                </li>
+
+                                <li class="content__item">
+                                    <div class="item__header">
+                                        <label class="switch">
+                                            <input type="checkbox" id="c2" onclick="showBlock('c2',2, 'r2')">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <p class="item__header-title">мониторинг</p>
+                                        <img src="../img/icons/arrow.svg" alt="" class="item__header-arrow">
+                                    </div>
+                                </li>
+
+                                <li class="content__item">
+                                    <div class="item__header item__header-api">
+                                        <label class="switch">
+                                            <input type="checkbox" id="c3" onclick="showBlock('c3',3, 'r3')">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <p class="item__header-title">API</p>
+                                        <img src="../img/icons/arrow.svg" alt="" class="item__header-arrow">
+
+                                        <div class="header-api-msg">
+                                            <p class="header-api-msg__title">За покупкой API обратитесь к менеджеру:</p>
+                                            <a href="#" class="header-api-msg__call header-api-msg__btn">Заказать
+                                                звонок</a>
+                                            <a href="#" class="header-api-msg__mail header-api-msg__btn">Написать на
+                                                почту</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-calc__buy-block">
+                        <div class="buy-block__img">
+                            <img src="../img/calculatehand.png" alt="">
+                        </div>
+                        <div class="buy-block__price">
+                            <p class="price__title">Стоимость в год</p>
+                            <p class="price__value">100 000 <span>₽</span> </p>
+                        </div>
+                        <div class="buy-block__btns">
+                            <a href="order.html" class="btns__buy">Приобрести продукт</a>
+                            <a href="#" class="btns__download">Скачать расчет в PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-content__deals">
+
+                    <div class="deals__deal-item">
+                        <div class="deal-item__title"><span>1 дело</span></div>
+                        <p class="deal-item__year-cost"> <span>6 500</span> ₽/год</p>
+                        <p class="deal-item__deal-cost">6 500₽ за 1 дело</p>
+                        <div class="deal-item__desc">1 дело без замен <p>без ограничений по делу</p>
+                        </div>
+                        <div class="deal-item__desc">Продукт: Электронные собрания и комитеты</div>
+                        <a href="#buy" class="deal-item__btn">Приобрести продукт</a>
+                    </div>
+
+                    <div class="deals__deal-item">
+                        <div class="deal-item__title"><span>5 дел</span></div>
+                        <p class="deal-item__year-cost"> <span>25 000</span> ₽/год</p>
+                        <p class="deal-item__deal-cost">5 000₽ за 1 дело</p>
+                        <div class="deal-item__desc">10 дел + 1 замена <p>без ограничений по делу</p>
+                        </div>
+                        <div class="deal-item__desc">Продукт: Электронные собрания и комитеты</div>
+                        <a href="#buy" class="deal-item__btn">Приобрести продукт</a>
+                    </div>
+
+                    <div class="deals__deal-item deals__deal-item-vip">
+                        <div class="deal-item__title deal-item__title-vip">10 дел</div>
+                        <p class="deal-item__year-cost"> <span>43 200</span> ₽/год</p>
+                        <p class="deal-item__deal-cost">4 320₽ за 1 дело</p>
+                        <div class="deal-item__desc">10 дел + 2 замены <p>без ограничений по делу</p>
+                        </div>
+                        <div class="deal-item__desc">Продукт: Электронные собрания и комитеты</div>
+                        <a href="#buy" class="deal-item__btn">Приобрести продукт</a>
+                    </div>
+
+
+                </div>
+
+                <p class="section-content__info">*НДС не облагается на основании пп. 26 п. 2 ст. 149 НК РФ</p>
+
+            </section>
+
+            <div class="account-main__hepl">
+                <div class="help__img">
+                    <img src="../img/icons/help.svg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- попап -->
+        <div id="buy" class="popup">
+            <a href="#" class="popup__area"></a>
+            <div class="popup__body">
+                <div class="buy-prod">
+                    <form action="#">
+                        <h1 class="buy-prod__title">Приобрести продукт</h1>
+
+                        <div class="buy-prod___message">Оставьте свои контактные данные и наши менеджеры свяжутся с
+                            вами для завершения процесса покупки в течение N минут
+                        </div>
+
+                        <div class="buy-prod___name start-form__input-container ">
+                            <input type="text" name="name" placeholder="Введите Имя">
+                        </div>
+
+
+                        <div class="buy-prod__telnumber start-form__input-container ">
+                            <input type="tel" name="telnumber" placeholder="+7 (999) 999-99-99">
+                        </div>
+
+                        <div class="buy-prod__email start-form__input-container ">
+                            <input type="email" name="email" placeholder="Введите e-mail">
+                        </div>
+
+                        <div class="buy-prod__count">
+                            <span>Пакет: 10 дел</span>
+                        </div>
+
+                        <!-- <div class="buy-prod__login-btn start-form__button-container">
+                            <button type="submit">Подтвердить</button>
+                        </div> -->
+
+                        <div class="buy-prod__login-btn start-form__button-container">
+                            <a href="#">Подтвердить</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="../script/script.js"></script>
+</body>
+
+</html>

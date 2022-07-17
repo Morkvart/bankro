@@ -1,0 +1,129 @@
+// @import "reset";
+// @import "vars";
+// @import "global";
+
+.history-search-field {
+  margin-top: 24px;
+  margin-bottom: 30px;
+  max-width: 424px;
+  width: 100%;
+  border: 1px solid #849eba;
+  border-radius: 4px;
+  height: 43px;
+  padding-left: 16px;
+  padding-right: 30px;
+  color: $primaryblue;
+  font-size: 16px;
+
+  background-image: url("../img/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 14px);
+  background-position-y: center;
+  background-size: 14px 14px;
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+}
+
+.history-table-container {
+  width: 100%;
+  //   overflow-x: auto;
+  table {
+    max-width: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+    tr {
+      text-align: left;
+      height: 39px;
+
+      th {
+        padding-left: 16px;
+
+        &:nth-child(1) {
+          div {
+            min-width: 221px;
+            // min-width: 120px;
+          }
+        }
+        &:nth-child(2) {
+          //   div {
+          // max-width: 695px;
+          width: 100%;
+          min-width: 200px;
+          //   }
+        }
+        &:nth-child(3) {
+          div {
+            min-width: 395px;
+            // min-width: 150px;
+          }
+        }
+        &:nth-child(4) {
+          div {
+            min-width: 245px;
+            // min-width: 200px;
+          }
+        }
+      }
+
+      td {
+        padding-left: 16px;
+        color: #000;
+        font-size: 14px;
+        &:nth-child(2) {
+          font-weight: 600;
+        }
+      }
+
+      &:nth-child(1) {
+        height: 45px;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 0.045em;
+        background-color: #f4f7fa;
+      }
+      &:nth-child(2n + 1) {
+        background-color: #f4f7fa;
+      }
+    }
+  }
+}
+
+.notices-list {
+  width: 100%;
+  margin-top: 30px;
+
+  .notices-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    height: 39px;
+    .item__title {
+      color: $primaryblue;
+      padding-left: 16px;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #d6dde4;
+        margin-right: 16px;
+        border-radius: 50%;
+      }
+    }
+    .item__title_active {
+      font-weight: 600;
+      &::before {
+        background-color: $akva;
+      }
+    }
+    .item__data {
+      color: #000;
+      padding-right: 16px;
+    }
+    &:nth-child(odd) {
+      background-color: #f4f7fa;
+    }
+  }
+}

@@ -30,38 +30,42 @@ body {
 //==================================== хедер
 .account__header {
   background-color: $primaryblue;
+  display: block;
   min-height: 80px;
   z-index: 100;
   .header__content {
-    height: 100%;
+    // height: 100%;
     display: flex;
     align-items: center;
     width: 100%;
 
     .header__logo {
-      min-width: 180px;
+      width: 180px;
       height: 45px;
+
       margin-right: 109px;
       img {
+        display: block;
         width: 100%;
         height: 100%;
       }
     }
 
     .header__info-panel {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
 
       //==================== статистика
       .infop-panel__statistics {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
 
         .statistics__title {
           color: $white;
-          font-size: 18px;
+          // font-size: 18px;
           font-weight: 500;
         }
 
@@ -73,14 +77,17 @@ body {
 
         .row1 {
           display: flex;
-          // line-height: 1.5;
+          flex-direction: row;
           .statistics__tasks {
             margin-right: 41px;
+            font-size: 18px;
             .tasks__title {
+              font-size: 18px;
               margin-right: 20px;
             }
           }
           .statistics__meeting {
+            font-size: 18px;
             .meeting__title {
               margin-right: 20px;
             }
@@ -88,8 +95,8 @@ body {
         }
 
         .row2 {
-          // line-height: 1.5;
           .statistics__day-end {
+            font-size: 16px;
             .day-end__title {
               font-weight: 400;
               font-size: 14px;

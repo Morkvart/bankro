@@ -301,7 +301,8 @@ body {
         width: 20px;
         height: 24px;
         margin-right: 8px;
-        background-size: auto;
+        // background-size: auto;
+        background-size: 20px 24px;
       }
       &:nth-child(4)::before {
         background-image: url("../img/icons/sidebar/products.svg");

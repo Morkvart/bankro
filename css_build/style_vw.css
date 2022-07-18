@@ -327,7 +327,7 @@ body {
   width: 1.25vw;
   height: 1.5vw;
   margin-right: 0.5vw;
-  background-size: auto;
+  background-size: 1.25vw 1.5vw;
 }
 .account-sidebar .account-sidebar__menu a:nth-child(4)::before {
   background-image: url("../img/icons/sidebar/products.svg");
@@ -1068,8 +1068,6 @@ body {
   box-shadow: 0 0 0.3125vw #27f3b5;
   border-radius: 0.25vw;
   background-color: #27f3b5;
-  width: 12px;
-  height: 12px;
   margin-right: 1vw;
 }
 .section-content__deals .deals__deal-item .deal-item__desc:last-child {

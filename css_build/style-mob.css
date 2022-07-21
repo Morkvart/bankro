@@ -1,0 +1,588 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+a:hover,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/IBMPlexSans.eot");
+  src: local("IBM Plex Sans"), local("IBMPlexSans"), url("../fonts/IBMPlexSans.eot?#iefix") format("embedded-opentype"), url("../fonts/IBMPlexSans.woff") format("woff"), url("../fonts/IBMPlexSans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/IBMPlexSans-Medium.eot");
+  src: local("IBM Plex Sans Medium"), local("IBMPlexSans-Medium"), url("../fonts/IBMPlexSans-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/IBMPlexSans-Medium.woff") format("woff"), url("../fonts/IBMPlexSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("IBMPlexSans-SemiBold.eot");
+  src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"), url("../fonts/IBMPlexSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/IBMPlexSans-SemiBold.woff") format("woff"), url("../fonts/IBMPlexSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+html {
+  font-family: "IBM Plex Sans", sans-serif;
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+}
+
+.account-main {
+  flex: 1 1 auto;
+}
+
+.account__container {
+  max-width: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+}
+
+.account__header {
+  background-color: #0f2945;
+  display: block;
+  min-height: 80px;
+  z-index: 100;
+}
+.account__header .header__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.account__header .header__content .header__logo {
+  width: 180px;
+  height: 45px;
+  margin-right: 109px;
+}
+.account__header .header__content .header__logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.account__header .header__content .header__info-panel {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background-color: lightcoral;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.account__header .header__content .header__info-panel .infop-panel__statistics .statistics__title {
+  color: #fff;
+  font-weight: 500;
+}
+.account__header .header__content .header__info-panel .infop-panel__statistics .statistics__count {
+  color: #27f3b5;
+  font-weight: 600;
+  font-size: 20px;
+}
+.account__header .header__content .header__info-panel .infop-panel__statistics .row1 {
+  display: flex;
+  flex-direction: row;
+}
+.account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__tasks {
+  margin-right: 41px;
+  font-size: 18px;
+}
+.account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__tasks .tasks__title {
+  font-size: 18px;
+  margin-right: 20px;
+}
+.account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__meeting {
+  font-size: 18px;
+}
+.account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__meeting .meeting__title {
+  margin-right: 20px;
+}
+.account__header .header__content .header__info-panel .infop-panel__statistics .row2 .statistics__day-end {
+  font-size: 16px;
+}
+.account__header .header__content .header__info-panel .infop-panel__statistics .row2 .statistics__day-end .day-end__title {
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 12px;
+}
+.account__header .header__content .header__info-panel .infop-panel__statistics .row2 .statistics__day-end .day-end__count {
+  font-size: 16px;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__link {
+  margin-right: 63px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__link::after {
+  display: inline-block;
+  margin-left: 11px;
+  transform: translateY(2px);
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/icons/back-app-link.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container {
+  position: relative;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container:hover .notice__container {
+  display: block;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .account-info__notice {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin-right: 71px;
+  position: relative;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .account-info__notice img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .account-info__notice .notice-count {
+  display: inline-block;
+  height: 18px;
+  min-width: 18px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: #27f3b5;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 15px;
+  position: absolute;
+  top: -9px;
+  left: 13px;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .notice__container {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: -150px;
+  min-width: 312px;
+  width: 100%;
+  padding: 20px 25px 27px;
+  color: rgba(255, 255, 255, 0.9);
+  background: #17304a;
+  border-radius: 10px;
+  z-index: 5;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .notice__container .notice__title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .notice__container .notice__list {
+  height: 170px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .notice__container .notice__list .list__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .notice__container .notice__list .list__item .item__content {
+  font-size: 13px;
+  max-width: 169px;
+  margin-bottom: 17px;
+  max-height: 51px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .notice__container .notice__list .list__item .item__data {
+  font-size: 12px;
+  color: #808a96;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .notice__container .notice__link-show {
+  font-size: 13px;
+  font-weight: 600;
+  color: #27f3b5;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__user {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__user .user__avatar {
+  width: 34px;
+  height: 34px;
+  margin-right: 11px;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__user .user__avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #33475d;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__user .user__name {
+  font-size: 14px;
+  color: #fff;
+}
+.account__header .header__content .header__info-panel .info-panel__account-info .account-info__logout-btn {
+  display: inline-block;
+  width: 120px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.account-sidebar {
+  display: none;
+  width: 290px;
+  min-height: 100%;
+  background-color: #f4f7fa;
+  box-shadow: -40px 0 #f4f7fa;
+  padding-top: 38px;
+  color: #0f2945;
+}
+.account-sidebar .account-sidebar__menu a {
+  font-size: 16px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  white-space: nowrap;
+}
+.account-sidebar .account-sidebar__menu a::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 20px;
+  border-radius: 100px 0px 0px 100px;
+  background-color: #0f2945;
+  margin-right: 0;
+  margin-left: auto;
+  opacity: 0;
+}
+.account-sidebar .account-sidebar__menu a::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  background-size: 15px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 14px;
+}
+.account-sidebar .account-sidebar__menu a:nth-child(1)::before {
+  background-image: url("../img/icons/sidebar/main.svg");
+}
+.account-sidebar .account-sidebar__menu a:nth-child(2)::before {
+  background-image: url("../img/icons/sidebar/calc.svg");
+}
+.account-sidebar .account-sidebar__menu a:nth-child(3)::before {
+  background-image: url("../img/icons/sidebar/meeting.svg");
+  width: 20px;
+  height: 24px;
+  margin-right: 8px;
+  background-size: 20px 24px;
+}
+.account-sidebar .account-sidebar__menu a:nth-child(4)::before {
+  background-image: url("../img/icons/sidebar/products.svg");
+}
+.account-sidebar .account-sidebar__menu a:nth-child(5)::before {
+  background-image: url("../img/icons/sidebar/history.svg");
+}
+.account-sidebar .account-sidebar__menu a:hover {
+  font-weight: 600;
+}
+.account-sidebar .account-sidebar__menu .active {
+  font-weight: 600;
+}
+.account-sidebar .account-sidebar__menu .active::after {
+  opacity: 1;
+}
+
+.account-main__section-content {
+  padding-top: 32px;
+  padding-left: 30px;
+  color: #1e2733;
+  width: 100%;
+  padding-bottom: 300px;
+}
+.account-main__section-content .section-content__title {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.account-main__hepl .help__img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #27f3b5;
+  padding: 22px;
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  right: 30px;
+  z-index: 10;
+}
+.account-main__hepl .help__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.account__start {
+  flex: 1 1 100%;
+  background: linear-gradient(253.06deg, #153b63 -33.73%, #091525 106.5%);
+  position: relative;
+}
+.account__start::after {
+  position: absolute;
+  content: "";
+  box-shadow: 0 0 250px 250px #27f3b5, 10px 10px 350px 350px #27aaf3;
+  opacity: 0.5;
+  top: -20px;
+  left: 0;
+}
+.account__start::before {
+  position: absolute;
+  content: "";
+  box-shadow: -100px -300px 200px 200px #27aaf3;
+  opacity: 0.2;
+  bottom: 0;
+  right: 0;
+}
+.account__start .account__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+}
+.account__start .start__start-form {
+  position: relative;
+  z-index: 100;
+  background: linear-gradient(288.01deg, rgba(13, 35, 60, 0.8) -1.44%, #0d233c 99.35%);
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+  border-radius: 8px;
+  max-width: none;
+  width: 100%;
+  margin-top: 30px;
+}
+.account__start .start__start-form .start-form__title {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.account__start .start__start-form .start-form__input-container {
+  font-size: 16px;
+  height: 64px;
+}
+.account__start .start__start-form .start-form__input-container input {
+  background-color: #0c1e34;
+  color: #a1c1d7;
+  width: 100%;
+  height: 100%;
+  padding-left: 23px;
+  border-radius: 8px;
+  border: 1px solid rgba(147, 160, 180, 0.3);
+}
+.account__start .start__start-form .start-form__input-container input::-moz-placeholder {
+  color: #a1c1d7;
+}
+.account__start .start__start-form .start-form__input-container input::placeholder {
+  color: #a1c1d7;
+}
+.account__start .start__start-form .start-form__subtitle {
+  color: #fff;
+}
+.account__start .start__start-form .start-form__button-container {
+  height: 64px;
+  color: #0c1e34;
+  font-size: 16px;
+}
+.account__start .start__start-form .start-form__button-container button {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #27f3b5;
+  border: 1px solid #69ffd1;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+.account__start .start__start-form .start-form__button-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #27f3b5;
+  border: 1px solid #69ffd1;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+.account__start .start__start-form .start-form__link {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  color: #27f3b5;
+  display: block;
+  text-align: center;
+}
+.account__start .start__authorization-form {
+  padding: 30px 30px 30px;
+}
+.account__start .start__authorization-form .authorization-form__title {
+  margin-bottom: 30px;
+}
+.account__start .start__authorization-form .authorization-form__tel {
+  margin-bottom: 16px;
+}
+.account__start .start__authorization-form .authorization-form__pass {
+  margin-bottom: 12px;
+  position: relative;
+}
+.account__start .start__authorization-form .authorization-form__pass img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.account__start .start__authorization-form .authorization-form__pass-subtitle {
+  font-size: 16px;
+  line-height: 177%;
+  margin-bottom: 16px;
+}
+.account__start .start__authorization-form .authorization-form__pass-subtitle a {
+  border-bottom: 1px solid #fff;
+}
+.account__start .start__authorization-form .authorization-form__login-btn {
+  margin-bottom: 20px;
+}
+.account__start .start__registration-form {
+  padding: 30px 30px;
+}
+.account__start .start__registration-form .registration-form__title {
+  margin-bottom: 30px;
+}
+.account__start .start__registration-form .registration-form__name,
+.account__start .start__registration-form .registration-form__surname,
+.account__start .start__registration-form .registration-form__patronymic,
+.account__start .start__registration-form .registration-form__email,
+.account__start .start__registration-form .registration-form__telnumber,
+.account__start .start__registration-form .registration-form__pass {
+  margin-bottom: 16px;
+}
+.account__start .start__registration-form .registration-form__pass {
+  position: relative;
+}
+.account__start .start__registration-form .registration-form__pass img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.account__start .start__registration-form .registration-form__subtitle {
+  font-size: 14px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+.account__start .start__registration-form .registration-form__reg-btn {
+  margin-bottom: 20px;
+}
+
+.start__login-form {
+  padding: 30px 30px 30px;
+}
+.start__login-form .login-form__title {
+  margin-bottom: 41px;
+}
+.start__login-form .login-form__message {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #a1c1d7;
+  text-align: center;
+  margin-bottom: 27px;
+}
+.start__login-form .login-form__message .message__number {
+  display: inline-block;
+  margin-top: 6px;
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.start__login-form .login-form__code {
+  margin-bottom: 36px;
+}
+.start__login-form .login-form__login-btn {
+  margin-bottom: 20px;
+}

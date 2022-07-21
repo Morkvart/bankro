@@ -365,3 +365,64 @@ body {
     }
   }
 }
+
+// ===================================== гамбургер
+#menu-toggler {
+  display: none;
+}
+
+#menu-toggler:checked + .hamburger span {
+  transition: all 0.3s;
+  transform: rotate(45deg);
+  // top: 8px;
+  top: 35px;
+}
+
+#menu-toggler:checked + .hamburger span::after {
+  transition: all 0.3s;
+  transform: rotate(-90deg);
+  top: 0;
+}
+
+#menu-toggler:checked + .hamburger span::before {
+  opacity: 0;
+}
+
+.hamburger {
+  display: none;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  cursor: pointer;
+}
+.hamburger span {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  z-index: 2;
+  display: block;
+  background-color: #fff;
+  width: 100px;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.hamburger span::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 10px;
+  top: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.hamburger span::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 10px;
+  top: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+}

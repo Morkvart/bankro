@@ -1,6 +1,7 @@
 //============================== список продуктов
 .section-content__products-list {
   display: flex;
+  flex-direction: column;
   width: 100%;
   margin-top: 20px;
 
@@ -11,7 +12,8 @@
     border-radius: 12px;
     background-color: $lightgrey;
     color: $primaryblue;
-    margin-right: 30px;
+    margin-right: 0;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     .item__header {
@@ -89,8 +91,12 @@
   margin-top: 20px;
 
   .products-no__img {
-    max-width: 150px;
-    max-height: 175px;
+    // max-width: 150px;
+    max-width: none;
+    width: 150px;
+    // max-height: 175px;
+    max-height: none;
+    height: 175px;
     img {
       display: block;
       width: 100%;

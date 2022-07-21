@@ -380,6 +380,66 @@ body {
   height: 100%;
 }
 
+#menu-toggler {
+  display: none;
+}
+
+#menu-toggler:checked + .hamburger span {
+  transition: all 0.3s;
+  transform: rotate(45deg);
+  top: 2.1875vw;
+}
+
+#menu-toggler:checked + .hamburger span::after {
+  transition: all 0.3s;
+  transform: rotate(-90deg);
+  top: 0;
+}
+
+#menu-toggler:checked + .hamburger span::before {
+  opacity: 0;
+}
+
+.hamburger {
+  display: none;
+  width: 6.25vw;
+  height: 6.25vw;
+  position: absolute;
+  cursor: pointer;
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  top: 1.25vw;
+  z-index: 2;
+  display: block;
+  background-color: #fff;
+  width: 6.25vw;
+  height: 0.625vw;
+  border-radius: 0.625vw;
+}
+
+.hamburger span::before {
+  position: absolute;
+  content: "";
+  width: 6.25vw;
+  height: 0.625vw;
+  top: 1.5625vw;
+  background-color: #fff;
+  border-radius: 0.625vw;
+}
+
+.hamburger span::after {
+  position: absolute;
+  content: "";
+  width: 6.25vw;
+  height: 0.625vw;
+  top: 3.125vw;
+  background-color: #fff;
+  border-radius: 0.625vw;
+}
+
 .account__start {
   flex: 1 1 100%;
   background: linear-gradient(253.06deg, #153b63 -33.73%, #091525 106.5%);

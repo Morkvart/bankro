@@ -302,6 +302,25 @@ body {
   border-radius: 2px;
   margin-bottom: 5.55556vw;
 }
+.account__header .header__content .header-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  width: 100%;
+  border-top: 1px solid #fff;
+}
+.account__header .header__content .header-sidebar a {
+  width: 100%;
+  font-size: 4.44444vw;
+  margin-top: 4.16667vw;
+  text-align: center;
+}
+.account__header .header__content .header-sidebar .active {
+  font-weight: 600;
+  color: #27f3b5;
+}
 
 .account-sidebar {
   display: none;

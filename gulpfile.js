@@ -15,12 +15,12 @@ gulp.task('desk', function () {
         .pipe(gulp.dest('css_build'));
 });
 
-// gulp.task('mob1', function () {
-//     return gulp.src('css/adaptation-courses-mob.css')
-//         .pipe(sourcemaps.init())
-//         .pipe(postcss([autoprefixer()]))
-//         .pipe(gulp.dest('css_build'));
-// });
+gulp.task('mob', function () {
+    return gulp.src('css/style-mob.css')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([autoprefixer()]))
+        .pipe(gulp.dest('css_build'));
+});
 
 
 gulp.task('desk_vw', function () {
@@ -45,39 +45,35 @@ gulp.task('desk_vw', function () {
         .pipe(gulp.dest('css_build'));
 });
 
-// gulp.task('mob_vw1', function () {
-//     return gulp.src('css_build/adaptation-courses-mob.css')
-//         .pipe(sourcemaps.init())
-//         .pipe(postcss([autoprefixer()]))
-//         .pipe(postcss([
-//             pxtoviewport({
-//                 viewportWidth: 360,
-//                 viewportUnit: 'vw',
-//                 minPixelValue: 2,
-//                 selectorBlackList: [
-//                     // /\.b-progress-bar/,
-//                     // /\.b-progress-bar__smartline/,
-//                     // /\.b-progress-bar__smartline::after/,
-//                     // /\.b-progress-bar__info/,
-//                 ],
-//             })
-//         ]))
-//         .pipe(inject.wrap('@media (max-width: 1024px) {\n', '\n}'))
-//         .pipe(rename('adaptation-courses_vw-mob.css'))
-//         .pipe(gulp.dest('css_build'));
-// });
+gulp.task('mob_vw', function () {
+    return gulp.src('css_build/style-mob.css')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([
+            pxtoviewport({
+                viewportWidth: 360,
+                viewportUnit: 'vw',
+                minPixelValue: 2,
+                selectorBlackList: [
+                    // /\.b-progress-bar/,
+                    // /\.b-progress-bar__smartline/,
+                    // /\.b-progress-bar__smartline::after/,
+                    // /\.b-progress-bar__info/,
+                ],
+            })
+        ]))
+        .pipe(inject.wrap('@media (max-width: 1024px) {\n', '\n}'))
+        .pipe(rename('style-mob-vw.css'))
+        .pipe(gulp.dest('css_build'));
+});
 
 
 
-
-// gulp.task('default', gulp.series(
-//     'desk1',
-//     'mob1',
-//     'desk_vw1',
-//     'mob_vw1'
-// ));
 
 gulp.task('default', gulp.series(
     'desk',
-    'desk_vw'
+    'mob',
+    'desk_vw',
+    'mob_vw'
 ));
+

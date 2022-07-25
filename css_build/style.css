@@ -1383,6 +1383,7 @@ body {
 }
 .history-table-container table tr td:nth-child(2) {
   font-weight: 600;
+  padding-right: 50px;
 }
 .history-table-container table tr:nth-child(1) {
   height: 45px;
@@ -1395,41 +1396,52 @@ body {
   background-color: #f4f7fa;
 }
 
-.notices-list {
-  width: 100%;
+.notice-table {
   margin-top: 30px;
+  width: 100%;
+  overflow-x: auto;
 }
-.notices-list .notices-list__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.notice-table table {
+  max-width: 100%;
+  border-spacing: 0;
   font-size: 14px;
+}
+.notice-table table tr {
   height: 39px;
 }
-.notices-list .notices-list__item .item__title {
+.notice-table table tr .item__title {
   color: #0f2945;
   padding-left: 16px;
+  max-width: 500px;
+  width: 100%;
+  white-space: nowrap;
+  padding-right: 30px;
 }
-.notices-list .notices-list__item .item__title::before {
+.notice-table table tr .item__title::before {
   content: "";
   display: inline-block;
   width: 10px;
   height: 10px;
   background-color: #d6dde4;
+  background-position-x: center;
+  background-position-y: center;
   margin-right: 16px;
   border-radius: 50%;
+  background-size: 10px 10px;
 }
-.notices-list .notices-list__item .item__title_active {
+.notice-table table tr .item__title_active {
   font-weight: 600;
 }
-.notices-list .notices-list__item .item__title_active::before {
+.notice-table table tr .item__title_active::before {
   background-color: #27f3b5;
 }
-.notices-list .notices-list__item .item__data {
+.notice-table table tr .item__data {
   color: #000;
   padding-right: 16px;
+  white-space: nowrap;
+  text-align: right;
 }
-.notices-list .notices-list__item:nth-child(odd) {
+.notice-table table tr:nth-child(odd) {
   background-color: #f4f7fa;
 }
 

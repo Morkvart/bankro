@@ -7,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bankro.tech</title>
 
-    <!-- <link rel="stylesheet" href="../css/history.css"> -->
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <link rel="stylesheet" href="../css_build/style.css">
     <link rel="stylesheet" href="../css_build/style_vw.css">
+    <link rel="stylesheet" href="../css_build/style-mob-vw.css">
 </head>
 
 <body>
@@ -20,6 +19,9 @@
                 <div class="header__logo">
                     <img src="../img/logo.svg" alt="">
                 </div>
+
+                <input type="checkbox" id="menu-toggler">
+                <label for="menu-toggler" class="hamburger"><span></span></label>
 
                 <div class="header__info-panel">
 
@@ -106,7 +108,7 @@
             <section class="account-main__section-content">
                 <h1 class="section-content__title">Уведомления</h1>
 
-                <div class="notices-list">
+                <!-- <div class="notices-list">
 
                     <div class="notices-list__item">
                         <p class="item__title item__title_active">Подтверждение успешной покупки продукта</p>
@@ -119,9 +121,30 @@
                     </div>
 
                     <div class="notices-list__item">
-                        <p class="item__title">Предупреждение. Срок действия вашего продукта заканчивается</p>
+                        <p class="item__title">Предупреждение. Срок действия вашего продукта заканчивается
+                        </p>
                         <p class="item__data">17.07.2022</p>
                     </div>
+                </div> -->
+                <div class="notice-table">
+                    <table>
+                        <tr>
+                            <td class="item__title item__title_active">Подтверждение успешной покупки продукта</td>
+                            <td class="item__data">Сегодня 16:34</td>
+                        </tr>
+
+                        <tr>
+                            <td class="item__title">Ошибка при покупке продукта. Недостаточно денег
+                                на балансе</td>
+                            <td class="item__data">Вчера 16:34</td>
+                        </tr>
+
+                        <tr>
+                            <td class="item__title">Предупреждение. Срок действия вашего продукта
+                                заканчивается</td>
+                            <td class="item__data">17.07.2022</td>
+                        </tr>
+                    </table>
                 </div>
 
 

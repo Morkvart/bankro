@@ -132,10 +132,12 @@ body {
 }
 .account__header .header__content .header__info-panel .infop-panel__statistics .row1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
 }
 .account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__tasks {
-  margin-right: 41px;
+  margin-right: 0;
   font-size: 18px;
 }
 .account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__tasks .tasks__title {
@@ -143,6 +145,9 @@ body {
   margin-right: 20px;
 }
 .account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__meeting {
+  position: absolute;
+  top: 370px;
+  left: 50;
   font-size: 18px;
 }
 .account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__meeting .meeting__title {
@@ -164,10 +169,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 80px;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__link {
   margin-right: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -186,8 +192,12 @@ body {
   background-size: 18px 18px;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container {
-  position: relative;
+  position: absolute;
+  top: -50px;
+  right: 80px;
+  left: calc(100vw - 100px);
   margin-bottom: 20px;
+  z-index: 1000;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container:hover .notice__container {
   display: block;
@@ -223,7 +233,7 @@ body {
   display: none;
   position: absolute;
   top: 20px;
-  left: -150px;
+  left: -230px;
   min-width: 312px;
   width: 100%;
   padding: 20px 25px 27px;
@@ -271,7 +281,10 @@ body {
   display: flex;
   align-items: center;
   margin-right: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 230px;
+  right: 50;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__user .user__avatar {
   width: 34px;
@@ -309,12 +322,16 @@ body {
   color: #fff;
   width: 100%;
   border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 .account__header .header__content .header-sidebar a {
   width: 100%;
   font-size: 16px;
   margin-top: 15px;
   text-align: center;
+}
+.account__header .header__content .header-sidebar a:last-child {
+  margin-bottom: 15px;
 }
 .account__header .header__content .header-sidebar .active {
   font-weight: 600;
@@ -396,8 +413,11 @@ body {
   padding-bottom: 300px;
 }
 .account-main__section-content .section-content__title {
-  font-size: 34px;
+  font-size: 24px;
   font-weight: 600;
+}
+.account-main__section-content .section-content__subtitle {
+  font-size: 16px;
 }
 
 .account-main__hepl .help__img {
@@ -407,10 +427,11 @@ body {
   background-color: #27f3b5;
   padding: 22px;
   cursor: pointer;
-  position: absolute;
-  top: 80%;
-  right: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
   z-index: 10;
+  transform: translateX(0px);
 }
 .account-main__hepl .help__img img {
   display: block;
@@ -429,6 +450,10 @@ body {
   height: 100vh;
   z-index: -1;
   left: -1000px;
+}
+.header__info-panel .info-panel__account-info .account-info__notice-container {
+  left: 1000px;
+  z-index: 1000;
 }
 
 #menu-toggler:checked ~ .header__info-panel {
@@ -789,7 +814,7 @@ body {
   width: 100%;
 }
 .section-content__product-calc .product-calc__settings-block .settings-block__title {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 24px;
 }
@@ -1394,6 +1419,8 @@ body {
   padding-left: 16px;
   color: #000;
   font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .history-table-container table tr td:nth-child(2) {
   font-weight: 600;

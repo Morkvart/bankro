@@ -133,10 +133,12 @@ body {
 }
 .account__header .header__content .header__info-panel .infop-panel__statistics .row1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 22.22222vw;
 }
 .account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__tasks {
-  margin-right: 11.38889vw;
+  margin-right: 0;
   font-size: 5vw;
 }
 .account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__tasks .tasks__title {
@@ -144,6 +146,9 @@ body {
   margin-right: 5.55556vw;
 }
 .account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__meeting {
+  position: absolute;
+  top: 102.77778vw;
+  left: 50;
   font-size: 5vw;
 }
 .account__header .header__content .header__info-panel .infop-panel__statistics .row1 .statistics__meeting .meeting__title {
@@ -165,10 +170,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 22.22222vw;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__link {
   margin-right: 0;
-  margin-bottom: 5.55556vw;
+  margin-bottom: 8.33333vw;
   color: #fff;
   font-size: 5vw;
   font-weight: 500;
@@ -187,8 +193,12 @@ body {
   background-size: 5vw 5vw;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container {
-  position: relative;
+  position: absolute;
+  top: -13.88889vw;
+  right: 22.22222vw;
+  left: calc(100vw - 27.77778vw);
   margin-bottom: 5.55556vw;
+  z-index: 1000;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container:hover .notice__container {
   display: block;
@@ -224,7 +234,7 @@ body {
   display: none;
   position: absolute;
   top: 5.55556vw;
-  left: -41.66667vw;
+  left: -63.88889vw;
   min-width: 86.66667vw;
   width: 100%;
   padding: 5.55556vw 6.94444vw 7.5vw;
@@ -272,7 +282,10 @@ body {
   display: flex;
   align-items: center;
   margin-right: 0;
-  margin-bottom: 5.55556vw;
+  margin-bottom: 0;
+  position: absolute;
+  top: 63.88889vw;
+  right: 50;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__user .user__avatar {
   width: 9.44444vw;
@@ -310,12 +323,16 @@ body {
   color: #fff;
   width: 100%;
   border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 .account__header .header__content .header-sidebar a {
   width: 100%;
   font-size: 4.44444vw;
   margin-top: 4.16667vw;
   text-align: center;
+}
+.account__header .header__content .header-sidebar a:last-child {
+  margin-bottom: 4.16667vw;
 }
 .account__header .header__content .header-sidebar .active {
   font-weight: 600;
@@ -397,8 +414,11 @@ body {
   padding-bottom: 83.33333vw;
 }
 .account-main__section-content .section-content__title {
-  font-size: 9.44444vw;
+  font-size: 6.66667vw;
   font-weight: 600;
+}
+.account-main__section-content .section-content__subtitle {
+  font-size: 4.44444vw;
 }
 
 .account-main__hepl .help__img {
@@ -408,10 +428,11 @@ body {
   background-color: #27f3b5;
   padding: 6.11111vw;
   cursor: pointer;
-  position: absolute;
-  top: 80%;
-  right: 8.33333vw;
+  position: fixed;
+  bottom: 8.33333vw;
+  right: 4.16667vw;
   z-index: 10;
+  transform: translateX(0px);
 }
 .account-main__hepl .help__img img {
   display: block;
@@ -430,6 +451,10 @@ body {
   height: 100vh;
   z-index: -1;
   left: -277.77778vw;
+}
+.header__info-panel .info-panel__account-info .account-info__notice-container {
+  left: 277.77778vw;
+  z-index: 1000;
 }
 
 #menu-toggler:checked ~ .header__info-panel {
@@ -790,7 +815,7 @@ body {
   width: 100%;
 }
 .section-content__product-calc .product-calc__settings-block .settings-block__title {
-  font-size: 6.11111vw;
+  font-size: 4.44444vw;
   font-weight: 600;
   margin-bottom: 6.66667vw;
 }
@@ -1395,6 +1420,8 @@ body {
   padding-left: 4.44444vw;
   color: #000;
   font-size: 3.88889vw;
+  padding-top: 2.77778vw;
+  padding-bottom: 2.77778vw;
 }
 .history-table-container table tr td:nth-child(2) {
   font-weight: 600;

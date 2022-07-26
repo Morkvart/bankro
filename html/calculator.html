@@ -25,6 +25,17 @@
 
                 <div class="header__info-panel">
 
+                    <nav class="header-sidebar">
+
+                        <a href="#">Главная</a></li>
+                        <a href="calculator.html" class="active">Калькулятор</a></li>
+                        <a href="meetings.html">Проведенные собрания</a></li>
+                        <a href="products.html">Мои продукты</a></li>
+                        <a href="history.html">История заказов</a></li>
+
+                    </nav>
+
+
                     <div class="infop-panel__statistics">
                         <div class="row1">
                             <div class="statistics__tasks">
@@ -88,16 +99,6 @@
                         <a href="#" class="account-info__logout-btn">Выйти</a>
                     </div>
 
-
-                    <nav class="header-sidebar">
-
-                        <a href="#">Главная</a></li>
-                        <a href="calculator.html" class="active">Калькулятор</a></li>
-                        <a href="meetings.html">Проведенные собрания</a></li>
-                        <a href="products.html">Мои продукты</a></li>
-                        <a href="history.html">История заказов</a></li>
-
-                    </nav>
                 </div>
             </div>
         </div>
@@ -132,13 +133,13 @@
                                 <li class="content__item">
                                     <div class="item__header">
                                         <label class="switch">
-                                            <input type="checkbox" id="c0" onclick="showBlock('c0',0,'r0')">
+                                            <input type="checkbox" checked id="c0" onclick="showBlock('c0',0,'r0')">
                                             <span class="sliderck round"></span>
                                         </label>
                                         <p class="item__header-title">Электронные собрания кредиторов</p>
                                         <img src="../img/icons/arrow.svg" alt="" class="item__header-arrow">
                                     </div>
-                                    <div class="item__body">
+                                    <div class="item__body item__body_active">
                                         <div class="body__title">Вы платите за количество собраний </div>
                                         <div class="body__select-block">
                                             <p class="select-block__subtitle">Количество собраний</p>

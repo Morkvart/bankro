@@ -371,9 +371,9 @@ body {
   background-color: #27f3b5;
   padding: 22px;
   cursor: pointer;
-  position: absolute;
-  top: 80%;
-  right: 30px;
+  position: fixed;
+  bottom: 50px;
+  transform: translateX(-100px);
   z-index: 10;
 }
 .account-main__hepl .help__img img {
@@ -1383,6 +1383,8 @@ body {
   padding-left: 16px;
   color: #000;
   font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .history-table-container table tr td:nth-child(2) {
   font-weight: 600;

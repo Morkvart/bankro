@@ -1365,7 +1365,20 @@ body {
   cursor: pointer;
 }
 
-.history-search-field {
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+  max-width: 117.77778vw;
+  width: 100%;
+}
+.input-container .history-search-field {
   margin-top: 6.66667vw;
   margin-bottom: 8.33333vw;
   max-width: 117.77778vw;
@@ -1377,14 +1390,15 @@ body {
   padding-right: 8.33333vw;
   color: #0f2945;
   font-size: 4.44444vw;
-  background-image: url("../img/icons/search.svg");
-  background-repeat: no-repeat;
-  background-position-x: calc(100% - 3.88889vw);
-  background-position-y: center;
-  background-size: 3.88889vw 3.88889vw;
 }
-.history-search-field::-webkit-search-cancel-button {
-  display: none;
+.input-container img {
+  width: 3.88889vw;
+  height: 3.88889vw;
+  display: block;
+  position: absolute;
+  top: 11.11111vw;
+  right: 4.16667vw;
+  cursor: pointer;
 }
 
 .history-table-container {

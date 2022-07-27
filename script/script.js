@@ -61,10 +61,19 @@ function selectPay(num) {
 
 function changeIcon() {
     let input = document.getElementsByClassName('history-search-field');
+    let clearbtn = document.getElementsByClassName('input-clear');
+
     if (input[0].value.length > 0) {
-        input[0].style.backgroundImage = 'url("../img/icons/clear.svg")'
+        // input[0].style.backgroundImage = 'url("../img/icons/clear.svg")'
+        clearbtn[0].src = "../img/icons/clear.svg";
     } else {
-        input[0].style.backgroundImage = 'url("../img/icons/search.svg")';
+        clearbtn[0].src = "../img/icons/search.svg";
     }
 
+}
+
+function clearInput() {
+    let input = document.getElementsByClassName('history-search-field');
+    input[0].value = '';
+    changeIcon();
 }

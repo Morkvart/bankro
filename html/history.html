@@ -122,8 +122,11 @@
             <section class="account-main__section-content">
                 <h1 class="section-content__title">История заказов</h1>
 
-                <input type="search" placeholder="Поиск среди заказов" class="history-search-field"
-                    oninput="changeIcon()">
+                <div class="input-container">
+                    <input type="search" placeholder="Поиск среди заказов" class="history-search-field"
+                        oninput="changeIcon()">
+                    <img src="../img/icons/search.svg" alt="" onclick="clearInput()" class="input-clear">
+                </div>
 
                 <div class="history-table-container">
                     <table>

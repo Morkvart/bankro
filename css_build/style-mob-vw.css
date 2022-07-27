@@ -195,10 +195,9 @@ body {
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container {
   position: absolute;
   top: -13.88889vw;
-  right: 22.22222vw;
-  left: calc(100vw - 27.77778vw);
+  right: 27.77778vw;
+  left: calc(277.77778vw + (100vw - 27.77778vw));
   margin-bottom: 5.55556vw;
-  z-index: 1000;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container:hover .notice__container {
   display: block;
@@ -241,7 +240,7 @@ body {
   color: rgba(255, 255, 255, 0.9);
   background: #17304a;
   border-radius: 2.77778vw;
-  z-index: 5;
+  z-index: 20;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .notice__container .notice__title {
   font-size: 3.61111vw;
@@ -452,16 +451,16 @@ body {
   z-index: -1;
   left: -277.77778vw;
 }
-.header__info-panel .info-panel__account-info .account-info__notice-container {
-  left: 277.77778vw;
-  z-index: 1000;
-}
 
 #menu-toggler:checked ~ .header__info-panel {
   top: 22.22222vw;
   left: 0;
   z-index: 1;
   transition: left 0.3s, background-color 0.3s;
+}
+#menu-toggler:checked ~ .header__info-panel .info-panel__account-info .account-info__notice-container {
+  left: calc(100vw - 27.77778vw);
+  z-index: 1000;
 }
 
 .account__start {

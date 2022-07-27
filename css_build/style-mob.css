@@ -194,10 +194,9 @@ body {
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container {
   position: absolute;
   top: -50px;
-  right: 80px;
-  left: calc(100vw - 100px);
+  right: 100px;
+  left: calc(1000px + (100vw - 100px));
   margin-bottom: 20px;
-  z-index: 1000;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container:hover .notice__container {
   display: block;
@@ -240,7 +239,7 @@ body {
   color: rgba(255, 255, 255, 0.9);
   background: #17304a;
   border-radius: 10px;
-  z-index: 5;
+  z-index: 20;
 }
 .account__header .header__content .header__info-panel .info-panel__account-info .account-info__notice-container .notice__container .notice__title {
   font-size: 13px;
@@ -451,16 +450,16 @@ body {
   z-index: -1;
   left: -1000px;
 }
-.header__info-panel .info-panel__account-info .account-info__notice-container {
-  left: 1000px;
-  z-index: 1000;
-}
 
 #menu-toggler:checked ~ .header__info-panel {
   top: 80px;
   left: 0;
   z-index: 1;
   transition: left 0.3s, background-color 0.3s;
+}
+#menu-toggler:checked ~ .header__info-panel .info-panel__account-info .account-info__notice-container {
+  left: calc(100vw - 100px);
+  z-index: 1000;
 }
 
 .account__start {

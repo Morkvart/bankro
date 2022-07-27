@@ -157,15 +157,13 @@ body {
         }
 
         .account-info__notice-container {
-          // position: relative;
           position: absolute;
-          // position: fixed;
           top: -50px;
-          right: 80px;
-          // left: calc(1000px + (100vw - 80px));
-          left: calc(100vw - 100px);
+          right: 100px;
+          left: calc(1000px + (100vw - 100px));
           margin-bottom: 20px;
-          z-index: 1000;
+          // z-index: 1000;
+
           &:hover .notice__container {
             display: block;
           }
@@ -200,16 +198,19 @@ body {
           }
           .notice__container {
             display: none;
+            // display: block;
+
             position: absolute;
             top: 20px;
             left: -230px;
+            // left: calc(1000px + (100vw - 100px));
             min-width: 312px;
             width: 100%;
             padding: 20px 25px 27px;
             color: rgba(255, 255, 255, 0.9);
             background: #17304a;
             border-radius: 10px;
-            z-index: 5;
+            z-index: 20;
             .notice__title {
               font-size: 13px;
               font-weight: 600;
@@ -453,13 +454,6 @@ body {
   z-index: -1;
 
   left: -1000px;
-
-  .info-panel__account-info {
-    .account-info__notice-container {
-      left: 1000px;
-      z-index: 1000;
-    }
-  }
 }
 
 #menu-toggler:checked ~ .header__info-panel {
@@ -467,4 +461,11 @@ body {
   left: 0;
   z-index: 1;
   transition: left 0.3s, background-color 0.3s;
+
+  .info-panel__account-info {
+    .account-info__notice-container {
+      left: calc(100vw - 100px);
+      z-index: 1000;
+    }
+  }
 }

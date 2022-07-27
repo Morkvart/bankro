@@ -56,3 +56,15 @@ function selectPay(num) {
 
     methods[num].classList.add('payment_active');
 }
+
+//смена иконки в поле поиска
+
+function changeIcon() {
+    let input = document.getElementsByClassName('history-search-field');
+    if (input[0].value.length > 0) {
+        input[0].style.backgroundImage = 'url("../img/icons/clear.svg")'
+    } else {
+        input[0].style.backgroundImage = 'url("../img/icons/search.svg")';
+    }
+
+}
